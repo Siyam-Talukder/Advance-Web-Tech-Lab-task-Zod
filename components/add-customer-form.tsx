@@ -11,7 +11,7 @@ const customerSchema = z.object({
   .regex(/^[^0-9]+$/, "Name cannot contain numbers"),
 
   email: z
-  .email({ error: "Invalid email address" }),
+  .email("Invalid email address"),
 
   password: z
   .string()
